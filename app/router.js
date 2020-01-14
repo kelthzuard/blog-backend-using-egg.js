@@ -6,5 +6,5 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
-  router.post('/single', controller.singleArticle.writeData);
+  router.get('/getArticle', controller.article.getArticle)
 };
