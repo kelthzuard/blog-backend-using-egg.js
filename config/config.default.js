@@ -41,7 +41,7 @@ module.exports = appInfo => {
       host: '127.0.0.1',
       port: '3306',
       user: 'root',
-      password: '',
+      password: 'aA522516259@163.com',
       database: 'blog'
     },
     app: true,
@@ -63,7 +63,7 @@ module.exports = appInfo => {
   config.cluster = {
     listen: {
       port: 80,
-      hostname: '127.0.0.1'
+      hostname: '0.0.0.0'
     }
   }
 
