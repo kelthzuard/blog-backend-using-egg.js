@@ -55,15 +55,15 @@ module.exports = appInfo => {
     domainWhiteList: [ '*' ]
   }
 
-  config.cors = {
-    origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
-  }
+  // config.cors = {
+  //   origin: '*',
+  //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
+  // }
 
   config.cluster = {
     listen: {
       port: 80,
-      hostname: '127.0.0.1'
+      hostname: '0.0.0.0'
     }
   }
 
