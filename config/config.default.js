@@ -60,6 +60,13 @@ module.exports = appInfo => {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
   }
 
+  config.cluster = {
+    listen: {
+      port: 80,
+      hostname: '127.0.0.1'
+    }
+  }
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
