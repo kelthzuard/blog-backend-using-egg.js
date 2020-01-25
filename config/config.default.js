@@ -2,6 +2,7 @@
 
 'use strict';
 
+const fs = require('fs')
 const path = require('path');
 
 /**
@@ -65,6 +66,10 @@ module.exports = appInfo => {
       port: 80,
       hostname: '0.0.0.0'
     }
+  }
+  
+  config.siteFile = {
+    '/favicon.icon': fs.readFileSync(path.join(__dirname, 'favicon.jpeg'))
   }
 
   // add your user config here
