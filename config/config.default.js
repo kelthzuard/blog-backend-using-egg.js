@@ -49,12 +49,12 @@ module.exports = appInfo => {
     agent: false
   }
 
-/*  config.security = {
+  config.security = {
     csrf: {
       enable: false
     },
-    domainWhiteList: [ '*' ]
-  }*/
+//    domainWhiteList: [ '*' ]
+  }
 
   // config.cors = {
   //   origin: '*',
