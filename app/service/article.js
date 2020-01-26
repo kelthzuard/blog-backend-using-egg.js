@@ -11,10 +11,11 @@ class articleService extends Service {
         return { data, total}
     }
     async getArticle (query) {
+        const result = await this.app.mysql.query('update article set watch = (watch + 1) where id = ?',[query.id]) 
         const data = await this.app.mysql.select('article', {
             where: {id: query.id}
         })
-        return { data }
+        return { data, result }
     }
     async writeData (articleInfo) {
        const date = new Date()
