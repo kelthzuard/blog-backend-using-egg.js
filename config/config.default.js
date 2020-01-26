@@ -53,7 +53,7 @@ module.exports = appInfo => {
     csrf: {
       enable: false
     },
-//    domainWhiteList: [ '*' ]
+  //  domainWhiteList: [ '*' ]
   }
 
   // config.cors = {
