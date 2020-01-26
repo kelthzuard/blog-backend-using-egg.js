@@ -15,6 +15,12 @@ class GalleryController extends Controller {
     const result = await ctx.service.gallery.writeData(galleryInfo)
     ctx.body =  { result }
   }
+  async addWatch () {
+    const ctx = this.ctx
+    const galleryInfo = this.ctx.query
+    const result = await ctx.service.gallery.addWatch(galleryInfo)
+    ctx.body = {result}
+  }
 }
 
 module.exports = GalleryController;

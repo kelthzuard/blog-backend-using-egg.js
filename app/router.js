@@ -12,4 +12,5 @@ module.exports = app => {
   router.get('/getArticle', controller.article.getArticle)
   router.post('/writeGallery', controller.gallery.writeGallery)
   router.get('/getGalleryList', controller.gallery.getGalleryList)
+  router.get('/addWatch', controller.gallery.addWatch)
 };
