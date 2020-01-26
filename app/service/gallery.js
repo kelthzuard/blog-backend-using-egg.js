@@ -11,10 +11,11 @@ class galleryService extends Service {
         return { data, total}
     }
     async getArticle (query) {
+        const result = await this.app.mysql.query('update gallery set watch = (watch + 1) where id = ?',[query.id]) 
         const data = await this.app.mysql.select('gallery', {
             where: {id: query.id}
         })
-        return { data }
+        return { result, data }
     }
     async writeData (galleryInfo) {
        const date = new Date()
